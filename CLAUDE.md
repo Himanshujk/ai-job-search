@@ -166,8 +166,13 @@ Both documents MUST be compiled and visually inspected via the Read tool on the 
 - [ ] **Cover letter bullet font matches body font** - `\lettercontent{}` must not wrap `\begin{itemize}...\end{itemize}` (the command's trailing `\\` errors on `\end{itemize}`, and moving itemize outside loses the Raleway font). Standard pattern: close `\lettercontent{}`, then wrap the list in `{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`
 
 ### ATS & keyword verification (CV)
+**Standing rule:** every drafted CV must score very high in all ATS. This is a gate, not a nice-to-have: do not present a CV until the items below pass. Maximum truthful literal keyword coverage plus clean parsing is the goal; no score can be guaranteed in every ATS, so say that when reporting, and never stuff keywords to chase it.
+
 ATS parsers read the PDF's embedded text layer, not the rendered page. Extract it with `python3 tools/verify_pdf.py cv/main_<company>_<role>.pdf --dump-text cv/main_<company>_<role>.txt` (pypdf, then `pdftotext -layout -enc UTF-8`) and verify what a parser sees. If both extractors are missing, skip the parseability items with a warning and check keyword coverage from the visual PDF read instead.
 - [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `�` replacement characters, or text visible in the PDF but absent from the extraction
 - [ ] Email and phone appear as **literal text** in the extraction (icon-glyph noise like `MOBILE-ALT`/`Envelope` is harmless, but a contact detail carried only by an icon or hyperlink is invisible to ATS)
 - [ ] Reading order of the extracted text matches the visual order (single-column stock template is safe; multi-column custom templates are where this breaks)
 - [ ] Posting keywords covered or honestly absent - synonym-only matches tightened to the posting's exact term where truthfully applicable, keywords the profile genuinely supports added to experience bullets, genuine gaps left visible and **never stuffed**
+- [ ] Every required keyword the profile supports is covered literally in the text layer; report the coverage count and list the honest gaps
+- [ ] Text layer checked with both extractors (pypdf and `pdftotext -layout -enc UTF-8`), since different ATS parsers behave like different extractors
+- [ ] Dates use a single ASCII hyphen with month-year on every role (`python3 tools/verify_pdf.py <cv>.pdf --ascii-dates` exits 0), standard section headings, single-column layout, no table or text-box content
