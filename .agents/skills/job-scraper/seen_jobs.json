@@ -1,0 +1,212 @@
+{
+  "seen": {
+    "https://www.golangprojects.com/golang-go-job-gxb-Remote-Europe-Senior-Software-Engineer-Cast-AI-remotework.html": {
+      "title": "Senior Software Engineer",
+      "company": "Cast AI",
+      "url": "https://www.golangprojects.com/golang-go-job-gxb-Remote-Europe-Senior-Software-Engineer-Cast-AI-remotework.html",
+      "first_seen": "2026-07-08",
+      "fit": "high",
+      "status": "new"
+    },
+    "https://jobs.ashbyhq.com/voodoo/52969c9a-dc02-4e52-8f9c-4d87bb1b13c7": {
+      "title": "Staff Backend Engineer - Golang",
+      "company": "Voodoo",
+      "url": "https://jobs.ashbyhq.com/voodoo/52969c9a-dc02-4e52-8f9c-4d87bb1b13c7",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "new"
+    },
+    "https://www.golangprojects.com/golang-go-job-gwp-Remote-Backend-Go-Engineer-Build-The-Next-Generation-Of-Global-Saas-Marketplace-Commerce-fully-Remote-California-based-Company-CYZA-remotework.html": {
+      "title": "Backend Go Engineer",
+      "company": "CYZA",
+      "url": "https://www.golangprojects.com/golang-go-job-gwp-Remote-Backend-Go-Engineer-Build-The-Next-Generation-Of-Global-Saas-Marketplace-Commerce-fully-Remote-California-based-Company-CYZA-remotework.html",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "new"
+    },
+    "https://www.golangprojects.com/golang-go-job-gxd-Remote-Senior-Golang-Developer-Milano-TRE-ALTAMIRA-Srl-remotework.html": {
+      "title": "Senior Golang Developer",
+      "company": "TRE ALTAMIRA Srl",
+      "url": "https://www.golangprojects.com/golang-go-job-gxd-Remote-Senior-Golang-Developer-Milano-TRE-ALTAMIRA-Srl-remotework.html",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "new"
+    },
+    "https://jobs.smartrecruiters.com/PayNearMe/744000062969188-site-reliability-engineer-remote-": {
+      "title": "Site Reliability Engineer",
+      "company": "PayNearMe",
+      "url": "https://jobs.smartrecruiters.com/PayNearMe/744000062969188-site-reliability-engineer-remote-",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "new"
+    },
+    "https://www.golangprojects.com/golang-go-job-gxa-Remote-Senior-Backend-Engineer-Go-Remote-UK-Remote-within-UK-Vistas-Recruitment-remotework.html": {
+      "title": "Senior Backend Engineer (Go)",
+      "company": "Vistas Recruitment (document automation client)",
+      "url": "https://www.golangprojects.com/golang-go-job-gxa-Remote-Senior-Backend-Engineer-Go-Remote-UK-Remote-within-UK-Vistas-Recruitment-remotework.html",
+      "first_seen": "2026-07-08",
+      "fit": "low",
+      "status": "skipped"
+    },
+    "https://www.golangprojects.com/golang-go-job-glt-Remote-Senior-Site-Reliability-Engineer-Wikimedia-Foundation-remotework.html": {
+      "title": "Senior Site Reliability Engineer",
+      "company": "Wikimedia Foundation",
+      "url": "https://www.golangprojects.com/golang-go-job-glt-Remote-Senior-Site-Reliability-Engineer-Wikimedia-Foundation-remotework.html",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "skipped"
+    },
+    "https://www.golangprojects.com/golang-go-job-dwq-Remote-Site-Reliability-Engineer-SRE-Portland-Customer-io-remotework.html": {
+      "title": "Site Reliability Engineer (SRE)",
+      "company": "Customer.io",
+      "url": "https://www.golangprojects.com/golang-go-job-dwq-Remote-Site-Reliability-Engineer-SRE-Portland-Customer-io-remotework.html",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "skipped"
+    },
+    "https://www.golangprojects.com/golang-go-job-dpj-Backend-Engineer-Visa-Sponsorship-Possible-London-Vistas-recruitment.html": {
+      "title": "Backend Engineer (Visa Sponsorship Possible)",
+      "company": "Vistas Recruitment",
+      "url": "https://www.golangprojects.com/golang-go-job-dpj-Backend-Engineer-Visa-Sponsorship-Possible-London-Vistas-recruitment.html",
+      "first_seen": "2026-07-08",
+      "fit": "high",
+      "status": "skipped"
+    },
+    "https://www.golangprojects.com/golang-go-job-eij-Backend-Engineer-Visa-Sponsorship-Possible-Paris-Vistas-Recruitment.html": {
+      "title": "Backend Engineer (Visa Sponsorship Possible)",
+      "company": "Vistas Recruitment",
+      "url": "https://www.golangprojects.com/golang-go-job-eij-Backend-Engineer-Visa-Sponsorship-Possible-Paris-Vistas-Recruitment.html",
+      "first_seen": "2026-07-08",
+      "fit": "high",
+      "status": "skipped"
+    },
+    "https://job-boards.greenhouse.io/monzo/jobs/6635837": {
+      "title": "Senior Backend Engineer",
+      "company": "Monzo",
+      "url": "https://job-boards.greenhouse.io/monzo/jobs/6635837",
+      "first_seen": "2026-07-08",
+      "fit": "high",
+      "status": "new"
+    },
+    "https://www.golangprojects.com/golang-remote-job-gmk-Remote-Europe-Senior-Backend-Engineer-Build-AI-Agents-Salesforge-remotejob.html": {
+      "title": "Senior Backend Engineer - Build AI Agents",
+      "company": "Salesforge",
+      "url": "https://www.golangprojects.com/golang-remote-job-gmk-Remote-Europe-Senior-Backend-Engineer-Build-AI-Agents-Salesforge-remotejob.html",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "new"
+    },
+    "https://weworkremotely.com/remote-jobs/azumo-golang-backend-engineer-latin-america": {
+      "title": "Golang Backend Engineer (Latin America only)",
+      "company": "Azumo",
+      "url": "https://weworkremotely.com/remote-jobs/azumo-golang-backend-engineer-latin-america",
+      "first_seen": "2026-07-08",
+      "fit": "low",
+      "status": "skipped"
+    },
+    "https://weworkremotely.com/remote-jobs/proxify-ab-senior-golang-developer-4": {
+      "title": "Senior Golang Developer (freelance marketplace, CET timezone)",
+      "company": "Proxify AB",
+      "url": "https://weworkremotely.com/remote-jobs/proxify-ab-senior-golang-developer-4",
+      "first_seen": "2026-07-08",
+      "fit": "low",
+      "status": "skipped"
+    },
+    "https://weworkremotely.com/remote-jobs/lemon-io-senior-golang-developer": {
+      "title": "Senior Golang Developer (freelance marketplace)",
+      "company": "Lemon.io",
+      "url": "https://weworkremotely.com/remote-jobs/lemon-io-senior-golang-developer",
+      "first_seen": "2026-07-08",
+      "fit": "low",
+      "status": "skipped"
+    },
+    "https://www.sumup.com/careers/positions/berlin-germany/engineering/senior-backend-engineer-golang/8576657002/": {
+      "title": "Senior Backend Engineer - Golang",
+      "company": "SumUp",
+      "url": "https://www.sumup.com/careers/positions/berlin-germany/engineering/senior-backend-engineer-golang/8576657002/",
+      "first_seen": "2026-07-08",
+      "fit": "high",
+      "status": "new"
+    },
+    "https://wellfound.com/jobs/3418166-senior-staff-golang-backend-engineer": {
+      "title": "Senior/Staff Golang Backend Engineer",
+      "company": "PAVE Bank",
+      "url": "https://wellfound.com/jobs/3418166-senior-staff-golang-backend-engineer",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "new"
+    },
+    "https://www.golangprojects.com/golang-go-job-fcz-Remote-Senior-Backend-Engineer-Visa-Sponsorship-Poss-London-Vistas-Recruitment-remotework.html": {
+      "title": "Senior Backend Engineer (Visa Sponsorship Poss)",
+      "company": "Vistas Recruitment",
+      "url": "https://www.golangprojects.com/golang-go-job-fcz-Remote-Senior-Backend-Engineer-Visa-Sponsorship-Poss-London-Vistas-Recruitment-remotework.html",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "expired"
+    },
+    "https://cutshort.io/job/Backend-Engineer-InvokHR-2G8A0Gwf": {
+      "title": "Backend Engineer",
+      "company": "Tazapay",
+      "url": "https://cutshort.io/job/Backend-Engineer-InvokHR-2G8A0Gwf",
+      "first_seen": "2026-07-08",
+      "fit": "low",
+      "status": "skipped"
+    },
+    "https://japan-dev.com/jobs/paypay/paypay-backend-engineer-epqq39": {
+      "title": "Backend Engineer",
+      "company": "PayPay",
+      "url": "https://japan-dev.com/jobs/paypay/paypay-backend-engineer-epqq39",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "new"
+    },
+    "https://careers.deliveryhero.com/job/senior-engineer-golang-tech-foundations-in-berlin-germany-jid-5358": {
+      "title": "Senior Engineer, Golang - Tech Foundations",
+      "company": "Delivery Hero",
+      "url": "https://careers.deliveryhero.com/job/senior-engineer-golang-tech-foundations-in-berlin-germany-jid-5358",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "expired"
+    },
+    "https://careers.deliveryhero.com/job/senior-software-engineer-golang-developer-platform-all-genders-in-berlin-germany-jid-1171": {
+      "title": "Senior Software Engineer (Golang) - Developer Platform",
+      "company": "Delivery Hero",
+      "url": "https://careers.deliveryhero.com/job/senior-software-engineer-golang-developer-platform-all-genders-in-berlin-germany-jid-1171",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "expired"
+    },
+    "https://careers.ovhcloud.com/job/ROUBAIX-Senior-software-developer-Golang-59100/1364900833": {
+      "title": "Senior software developer - Golang",
+      "company": "OVHcloud",
+      "url": "https://careers.ovhcloud.com/job/ROUBAIX-Senior-software-developer-Golang-59100/1364900833",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "expired"
+    },
+    "https://to.indeed.com/aa44fnshqz6y": {
+      "title": "Senior Golang Engineer (Recommendation), Strategy Engine",
+      "company": "Binance",
+      "url": "https://to.indeed.com/aa44fnshqz6y",
+      "first_seen": "2026-07-08",
+      "fit": "medium",
+      "status": "new"
+    },
+    "https://to.indeed.com/aaq6hrh9cpyt": {
+      "title": "Senior Backend Engineer - Golang",
+      "company": "SMG Swiss Marketplace Group (tutti.ch/anibis.ch)",
+      "url": "https://to.indeed.com/aaq6hrh9cpyt",
+      "first_seen": "2026-07-08",
+      "fit": "high",
+      "status": "new"
+    },
+    "https://to.indeed.com/aa47fm2nn4mp": {
+      "title": "Staff Software Engineer Backend, Billing (Java-primary, Go nice-to-have)",
+      "company": "Airwallex",
+      "url": "https://to.indeed.com/aa47fm2nn4mp",
+      "first_seen": "2026-07-08",
+      "fit": "low",
+      "status": "skipped"
+    }
+  }
+}

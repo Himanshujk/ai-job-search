@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Himanshu Jakhmola
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -40,7 +39,7 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Himanshu Jakhmola - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -48,15 +47,11 @@
 }}
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
+\usepackage{needspace}
 
 % personal data
-\name{[First]}{[Last]}
-% If you have no address to list, DELETE this whole line. \address{}{}{} fails
-% with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Himanshu}{Jakhmola}
+\extrainfo{\footnotesize Delhi, India ~\textbullet~ +91-8368891620 ~\textbullet~ \href{mailto:himanshujakhmola143@gmail.com}{himanshujakhmola143@gmail.com} ~\textbullet~ \href{https://linkedin.com/in/himanshu-j-719b33b4}{LinkedIn} ~\textbullet~ \href{https://github.com/Himanshujk}{GitHub}}
 
 \begin{document}
 
@@ -66,26 +61,33 @@
 %     PROFILE STATEMENT
 % ============================================================
 
-\vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\section{Professional Summary}
+\vspace{1pt}
+\small{Go (Golang) backend developer with 5+ years of production experience, from junior developer to leading backend architecture for an AI-driven talent intelligence platform. Shipped scalable microservices, RESTful APIs, and gRPC/Protocol Buffers services across PostgreSQL, CockroachDB, and AWS, covering the full lifecycle from data modeling to secure deployment. Built AI/LLM integrations spanning semantic search (a CV vectorization pipeline) and real-time voice agents (LiveKit, Deepgram, Cartesia, Simli). Mentor backend developers and drive microservices adoption across teams.}
 
 % ============================================================
 %     CORE COMPETENCIES
 % ============================================================
 
-\section{Core Competencies}
+\section{Technical Skills}
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Backend Development}: Go (Golang), gRPC, Protocol Buffers, RPC, RESTful APIs, microservices architecture
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Databases}: PostgreSQL, CockroachDB, MySQL, Redis, Elasticsearch, VectorDB
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Cloud \& DevOps}: AWS (Lambda, CloudFormation, S3, IAM), GCP, Docker, Kubernetes, CI/CD, Linux
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Security \& Access Control}: JWT authentication, OAuth (third-party integrations), RBAC and attribute-based access control, AWS IAM
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Observability \& Messaging}: OpenTelemetry, Prometheus, Grafana, Jaeger, RabbitMQ, Temporal
+
+\item \textbf{AI/LLM Integration}: OpenAI API, Anthropic Claude API (multi-agent orchestration), LiveKit, Deepgram (STT), Cartesia (TTS), Simli (real-time avatar)
+
+\item \textbf{Secondary Stacks (AI-assisted exposure via Claude Code)}: Django/DRF, Celery, PHP/Laravel, Electron, Node.js, TypeScript, React - directed and reviewed on a polyglot platform, not independently hands-on depth
+
+\item \textbf{Testing, Tooling \& AI Coding}: Ginkgo, GoMock, pprof, GitHub, Jira, monday.com; Claude Code (daily use), GitHub Copilot, Cursor, Antigravity CLI, MCP
 
 \end{itemize}
 
@@ -98,32 +100,88 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{May 2026--Present}{Back End Developer}{DC Forte India Private Limited}{Gurugram, India (Remote)}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1 - be specific, use numbers where possible]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
-    \item {[Achievement or responsibility 4]}
+    \item Lead design and development of scalable Go backend architecture for an AI-driven talent intelligence platform
+    \item Lead design of the CV vectorization pipeline enabling AI-powered semantic search and candidate matching
+    \item Built resume/job parsing using the OpenAI API to structure unstructured CV and job description data
+    \item Built an AI voice interview agent using LiveKit, Deepgram, Cartesia, and Simli (transport, STT, TTS, avatar)
+    \item Built a multi-agent content-generation pipeline on the Anthropic Claude API, shipped as an Electron desktop app (Express, SQLite)
+    \item Extended platform backend services in Django REST Framework (Python) and PHP/Laravel alongside Go and Node.js, integrating WhatsApp Business API and third-party content/distribution APIs
+    \item Coach and mentor backend developers via code reviews in a multinational Agile/Scrum team (monday.com)
+    \item Design scalable data models and backend services, secured with JWT and OAuth
+    \item Develop and maintain the Agent Registry, using Temporal for agent lifecycle workflow orchestration
+    \item Ported the core API from Node.js/Express to Go, auditing parity with Claude Code; manage multi-language codebases the same way
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{Sep 2024--Apr 2026}{Backend Developer}{GrowThrive Private Limited}{Gurugram, India (Remote)}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
+    \item Architected secure Go APIs across 20-25 microservices plus web and mobile BFF layers, on 2 CockroachDB, 2 Elasticsearch, and 3 vector database clusters, at 99.9\% uptime
+    \item Designed and built a multi-tenant permissions system (RBAC and attribute-based rules) with JWT claims and PostgreSQL/CockroachDB roles tables, enforced via middleware across API endpoints
+    \item Drove adoption of microservices architecture to enhance modularity and scalability
+    \item Monitored with OpenTelemetry, Prometheus, Grafana: under 200 ms avg latency, most incidents fixed in an hour
+    \item Designed database schemas and queries for performance and scalability, and cut a slow export API from 16 minutes to under 2 seconds via PostgreSQL query tuning, concurrency, and fetching only the data needed
+    \item Used RabbitMQ for asynchronous messaging between backend services
+    \item Mentored 10-12 developers and reviewed code for 20+; worked in multinational Agile/Scrum teams (Jira)
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Nov 2022--Sep 2024}{Junior Backend Developer}{GrowThrive Private Limited}{Gurugram, India (Remote)}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
+    \item Developed backend services using Golang, Docker, CockroachDB, PostgreSQL, gRPC, Protocol Buffers, AWS
+    \item Optimized system performance and troubleshot complex production issues
 \end{itemize}}}
+
+\vspace{3pt}
+
+% --- Earlier Role ---
+\needspace{5\baselineskip}
+\item{\cventry{Aug 2021--Nov 2022}{Software Engineer}{Think Future Technologies}{Gurugram, India (Remote)}{}{\vspace{1pt}
+\begin{itemize}
+    \item Led a project from scratch, taking ownership of architecture, backend logic, and API design in Golang
+    \item Architected backend infrastructure for scalability, performance, and security throughout the project lifecycle
+    \item Collaborated cross-functionally in a multinational team to define requirements and integrate multiple services
+    \item Delivered the project on time and to business objectives while maintaining high-quality coding standards
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Earlier Role ---
+\needspace{5\baselineskip}
+\item{\cventry{Feb 2021--Aug 2021}{Software Trainee}{Think Future Technologies}{Gurugram, India (Remote)}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built foundational Go skills through active development of backend services and internal tools
+    \item Profiled Go code using pprof and optimized performance
+    \item Participated in code reviews and development meetings to learn industry-standard practices
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     PROJECTS
+% ============================================================
+
+\section{Projects}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{Skill Matcher} (personal project): Terminal tool in Go (Bubble Tea TUI) for exact and semantic skill matching across Excel datasets using FastText word embeddings, with concurrent file processing. \href{https://github.com/Himanshujk/skill-matcher}{GitHub}
+
+\item \textbf{Candidate Semantic Match Service}: gRPC (Protocol Buffers)/HTTP service matching candidates to job descriptions - exact-match filtering combined with vector search via a Weaviate database using Ollama embeddings
+
+\item \textbf{CV Generation Service}: Go service generating LaTeX CV PDFs in multiple styles, on Kubernetes with autoscaling
+
+\item \textbf{Go Performance Writing} (LinkedIn): Go GC (GOMEMLIMIT, GOGC), sync.Pool, and error-handling benchmarks and guides
+
+\item \textbf{DSA Meets Design} (open source contribution): Merged pull request adding full Go language support across 20 machine-coding/LLD interview problems to a community interview-prep repository. \href{https://github.com/jkaus324/machine-coding-interview-questions/pull/2}{Pull Request}
+
+\item \textbf{CalcDock \& realonlinecalculator.com} (personal projects): Flutter calculator app (closed testing) and Astro calculator site on Cloudflare, both built solo using Claude Code
 
 \end{itemize}
 
@@ -135,15 +193,7 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
-
-\vspace{3pt}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{2017--2021}{Bachelor of Technology (B.Tech) in Computer Science \& Information Technology}{Dronacharya College of Engineering}{Gurugram, India}{}{}}
 
 \end{itemize}
 
@@ -154,37 +204,28 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item {[Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).}
+\item Hindi (native), English (fluent).
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
+%     CERTIFICATIONS
 % ============================================================
 
-\section{Publications}
+\section{Certifications}
 \vspace{1pt}
 \begin{itemize}
-\item {[Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}}
+\item Go (Basic), Go (Intermediate), Problem Solving -- HackerRank
 \end{itemize}
 
 % ============================================================
-%     HONORS AND AWARDS (optional)
+%     AWARDS
 % ============================================================
 
-\section{Honors and Awards}
+\enlargethispage{3\baselineskip}
+\section{Awards}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
-\end{itemize}
-
-% ============================================================
-%     REFERENCES
-% ============================================================
-
-\section{References}
-\vspace{1pt}
-\begin{itemize}
-\item{Available upon request.}
+\item SuperQuiz '18 -- 2nd position, SAEINDIA Collegiate Club, Dronacharya College of Engineering
 \end{itemize}
 
 \end{document}

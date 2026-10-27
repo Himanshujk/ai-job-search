@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Himanshu Jakhmola
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Himanshu Jakhmola, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,76 +13,105 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Himanshu Jakhmola
+- **Location:** Delhi, India (remote preferred; open to relocation if employer covers relocation and visa)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
+  | Hindi | Native |
+  | English | Fluent |
   <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
   working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
   undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
   lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
   04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+- **CV language:** English <!-- English unless your market expects otherwise; /setup asks -->
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Currently employed - Back End Developer at DC Forte India Private Limited
+- **LinkedIn headline:** "Go (Golang) Backend Developer | Microservices & Distributed Systems | RESTful APIs | PostgreSQL | AWS | Building Reliable, Scalable Backends"
 
 ### Education
 <!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.Tech in Computer Science & Information Technology** (2017-2021) - Dronacharya College of Engineering, Gurugram
 
 ### Professional Experience
 <!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Back End Developer** (May 2026 - Present) - **DC Forte India Private Limited** (Gurugram - Remote)
+  - Lead design of scalable backend architecture in Go for an AI-driven talent intelligence platform
+  - Lead design of the CV vectorization pipeline enabling AI-powered semantic search and candidate matching
+  - Built resume/job parsing using OpenAI API to structure unstructured CV and job description data
+  - Built an AI voice interview/screening agent using LiveKit (real-time transport), Deepgram (STT), Cartesia (TTS), and Simli (real-time avatar)
+  - Coach and mentor backend developers via code reviews
+- **Backend Developer** (September 2024 - April 2026) - **GrowThrive Private Limited** (Gurugram - Remote)
+  - Architected reliable, high-performance, secure APIs for business-critical operations
+  - Drove adoption of microservices architecture; ensured reliability via Grafana/Jaeger monitoring
+  - Built resume parsing feature using OpenAI API
+  - Used RabbitMQ for asynchronous messaging between backend services
+  - Used GCP (Cloud Storage, BigQuery) for object storage and data warehousing
+  - Used AWS IAM for access control and permissions management
+- **Junior Backend Developer** (November 2022 - September 2024) - **GrowThrive Private Limited** (Gurugram - Remote)
+  - Developed backend services using Golang, Docker, CockroachDB, PostgreSQL, gRPC, RPC, AWS
+- **Software Engineer** (August 2021 - November 2022) - **Think Future Technologies** (Gurugram - Remote)
+  - Led a project from scratch: architecture, APIs, and business logic in Golang
+- **Software Trainee** (February 2021 - August 2021) - **Think Future Technologies** (Gurugram - Remote)
+  - Built foundational Go skills through backend service and internal tool development; profiled Go code using pprof
+
+### Independent Projects
+<!-- Projects outside employment: personal, open source. See 01-candidate-profile.md for full detail incl. verified links. -->
+- **Skill-Matcher**: Terminal tool (Go, Bubble Tea TUI) for exact/semantic skill matching over Excel datasets using FastText embeddings; concurrent file processing, 300+ built-in skill aliases.
+- **DSA Meets Design** (open source contribution): Merged PR adding full Go language support across 20 machine-coding/LLD interview problems (+22,007/-161 lines) to a community interview-prep repo.
+- **CalcDock: Calculators & Tools**: Flutter mobile calculator app (iOS/Android), built and managed solo using AI coding agents (Claude Code). Currently in closed testing.
+- **realonlinecalculator.com**: Web-based calculator site built with Astro, deployed on Cloudflare, built and managed solo using AI coding agents (Claude Code). Live/deployed.
+
+<!-- Candidate Semantic Match Service and CV Generator Service are DC Forte/Kalido employer platform components (same work as the CV vectorization/semantic-search bullet above under DC Forte), not independent projects. See "Employer Platform Components" in 01-candidate-profile.md - do not list as personal projects on a CV, and never include employer name/domain/infra specifics if referenced. -->
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Go (Golang), gRPC/RPC, microservices architecture, RESTful APIs
+- **Secondary:** PostgreSQL, CockroachDB, MySQL, Redis, Elasticsearch, VectorDB, Docker, Kubernetes, AWS (Lambda, CloudFormation, S3, Bedrock, IAM), GCP (Cloud Storage, BigQuery), RabbitMQ, Temporal
+- **Domain:** Distributed systems, semantic search / vector search (Weaviate, Ollama embeddings), backend observability (Grafana, Jaeger)
+- **AI/LLM integration:** OpenAI API, LiveKit (real-time audio/video/agents), Deepgram (STT), Cartesia (TTS), Simli (real-time avatar)
+- **Software:** LaTeX, GitHub, Ginkgo, GoMock, pprof
+- **AI tooling:** Claude Code, Cursor, Antigravity CLI, MCP (Model Context Protocol) - agentic coding, custom MCP server integrations
 
 ### Certifications
 <!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Go (Basic)** - HackerRank
+- **Go (Intermediate)** - HackerRank
+- **Problem Solving** - HackerRank
 
 ### Publications
 <!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None
 
 ### Awards
 <!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- **SuperQuiz '18** - 2nd position, SAEINDIA (Society of Automotive Engineers India) Collegiate Club, Dronacharya College of Engineering, Gurugram
 
 ### Behavioral Profile
 <!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- No formal assessment on file - see `.claude/skills/job-application-assistant/02-behavioral-profile.md` for inferred traits (labeled, needs review)
+- **Strengths:** Enjoys tackling challenging problems, cross-functional collaboration, mentoring
+- **Growth areas:** Public speaking / conference talks - strong written comms and mentoring, building up speaking experience
+- **Thrives in:** Autonomy and ownership of problems end-to-end; fast-paced, high-ambiguity environments; also adaptable to structured, well-scoped work
+- **Draining tasks:** Heavy process/meetings, frontend/UI work outside core backend strength
 
 ### What Excites You
 <!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- High compensation and clear growth trajectory
+- Opportunities to travel
 
 ### Target Sectors
 <!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Backend/Go engineering roles across any sector (no specific target companies)
 
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Compensation below 50 LPA INR (or currency-equivalent-or-higher outside India)
+- Relocation is **not** a deal-breaker. Only exclude a relocation-required posting if the posting explicitly states no relocation/visa support is offered. If sponsorship/relocation support is unstated or unknown, include the posting and flag it as "relocation/visa support unknown - verify before applying."
+- Always exclude expired postings and any posting older than the search's recency window (see job-scraper's `--jobage` filter).
+- Exclude a posting if it explicitly states a minimum years-of-experience requirement above 6. Only act on an explicit stated number (e.g. "8+ years", "minimum 8 years") - never infer from a seniority title alone ("Lead"/"Staff"/"Principal" do not by themselves imply excess experience; some state as little as 3+ years). If no explicit number is stated, don't exclude.
+- Current notice period is 60 days. If a posting explicitly states a required notice period shorter than 60 days (e.g. "30 Days/15 Days/Immediate Joiner", "immediate joiners only"), include the posting but flag the mismatch clearly - don't silently exclude, since notice period is often negotiable, but don't proceed to CV/cover letter without surfacing it first.
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

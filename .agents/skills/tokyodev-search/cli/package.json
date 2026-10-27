@@ -1,0 +1,20 @@
+{
+  "name": "tokyodev-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching jobs on tokyodev.com — English-language tech job board for Japan (Tokyo and remote-from-Japan roles). No authentication, zero runtime dependencies.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "tokyodev-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}

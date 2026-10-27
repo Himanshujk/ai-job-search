@@ -60,9 +60,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Go (Golang), gRPC/RPC, microservices architecture, distributed systems, REST APIs, PostgreSQL, CockroachDB, MySQL, Redis, AWS (Lambda, CloudFormation, S3), Docker, Kubernetes
+**Moderate match areas:** Semantic search / vector databases (Weaviate, VectorDB), Elasticsearch, RabbitMQ, Temporal, observability (Grafana, Jaeger), mentoring/technical leadership
+**Weak match areas:** Frontend development, non-Go languages beyond C/C++, formal people-management experience
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +74,11 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Backend/Go developer roles, microservices/distributed systems roles, API design roles
+**Moderate:** Platform Engineer, Site Reliability Engineer, technical lead roles (has mentoring experience but no formal management title)
+**Entry-level:** None - 5+ years professional Go backend experience
+
+**Hard cap:** if the posting explicitly states a minimum years-of-experience requirement above 6 (e.g. "8+ years", "minimum 8 years"), this is a deal-breaker - FAIL the role regardless of other scores. Check the actual stated number only, never infer from a seniority title ("Lead"/"Staff"/"Principal" vary widely - some state as little as 3+ years). No explicit number stated means no cap applies.
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -91,9 +93,11 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+- Within commute range, or remote: PASS
+- Requires relocation/visa, sponsorship confirmed in posting: PASS (note it)
+- Requires relocation/visa, sponsorship unstated/unknown: FLAG (not a fail - relocation itself is not a deal-breaker; flag for the user to verify before applying)
+- Requires relocation/visa, posting explicitly states no sponsorship/support: FAIL (deal-breaker)
+- Posting explicitly restricts eligibility to candidates already resident in a specific region/country the candidate isn't in (e.g. "US Timezone only", "US Candidates", a single-country-only remote tag): FAIL (deal-breaker - distinct from the relocation case above, since there is nothing to sponsor)
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -107,19 +111,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Stay and grow deeper in Go (Golang) backend development as core specialization
+- Move into roles with higher compensation and growth trajectory
+- Roles that offer opportunities to travel
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: High-compensation roles with clear growth path, backend/distributed-systems architecture work, opportunities involving travel
+- Tasks that drain: Heavy process/meetings (bureaucracy, slow decision-making), frontend/UI work outside core backend strength
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Compensation floor of 50 LPA INR (or currency-equivalent-or-higher for roles outside India) is a hard filter - do not present roles below this without flagging clearly
+- **Flexibility**: Remote preferred; open to relocation only if employer covers relocation and visa costs
+- **Professional development**: Building public-speaking/conference-talk experience alongside deepening Go backend architecture skills
 
 ### 6. Salary Benchmark (Optional)
 

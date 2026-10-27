@@ -55,6 +55,13 @@ The `\lettercontent{}` macro appends `\\` to its argument. This breaks when the 
 
 The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\lettercontent{}` without the `\fontspec` block, bullets render in the default body font (Lato) and visually mismatch the rest of the letter.
 
+### Known template pitfall: `\\` inside `\closing{}`
+
+`cover.cls`'s `\closing{#1}` macro already appends its own `\\` after `#1`. Passing `\closing{Kind regards,\\}` (as shown in older copies of the Document Structure example below) doubles up the linebreak and throws `! LaTeX Error: There's no line here to end.` on compile — nonstopmode auto-recovers and still emits a correct-looking PDF, so the error is easy to miss unless you check the compile log.
+
+**Wrong:** `\closing{Kind regards,\\}`
+**Correct:** `\closing{Kind regards,}`
+
 ## Document Structure
 
 ```latex

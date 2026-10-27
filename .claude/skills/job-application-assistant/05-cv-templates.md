@@ -69,13 +69,11 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
+% Contact info renders as a single line under the name via \extrainfo alone -
+% do not also call \address/\phone/\email, moderncv banking style puts each
+% on its own row and three stacked rows reads as dated/cluttered.
 \name{[FIRST_NAME]}{[LAST_NAME]}
-% If you have no address to list, DELETE this whole line. \address{}{}{} fails
-% with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\extrainfo{\footnotesize [YOUR_ADDRESS] ~\textbullet~ [YOUR_PHONE] ~\textbullet~ \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} ~\textbullet~ \href{[YOUR_LINKEDIN_URL]}{LinkedIn} ~\textbullet~ \href{[YOUR_GITHUB_URL]}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -84,9 +82,10 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 % 2. Skills section
 % 3. Education section
 % 4. Professional Experience section
-% 5. Selected Publications (if applicable)
-% 6. Honors and Awards (if applicable)
-% 7. References
+% 5. Projects (always include - see Projects section below)
+% 6. Selected Publications (if applicable)
+% 7. Honors and Awards (if applicable)
+% 8. References
 
 \end{document}
 ```
@@ -94,6 +93,10 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 ### Color overrides
 
 The `\renewcommand*` on `\namefont` and the three `\colorlet` lines in the preamble are required on lualatex+MiKTeX. Without them the name and section headings render in black even though `\moderncvcolor{blue}` is set, which looks inconsistent with the rest of the blue accent scheme (links, bullet markers, contact icons). The cause: `moderncvstylebanking.sty` defines the name colours with `\colorlet`, which *copies* the accent colour as it is before the scheme is applied, so the name colours are frozen to the pre-scheme value; re-assigning them with `\colorlet` after `\moderncvcolor{blue}` (as the preamble does) re-pins them to `color1`. `\namefont` is the shared hook every name-style macro routes through, so the block is version-agnostic - including moderncv 2.3.1 from Debian/Ubuntu apt, which has no `\firstnamestyle`/`\lastnamestyle` at all. Both names render bold; if you prefer regular weight, change `\bfseries` to `\mdseries` in the `\namefont` line (the weight now lives there, so it applies to the whole name). Don't drop the overrides - on most modern installs the defaults render visibly wrong.
+
+### Contact header renders as a single line (important)
+
+Calling `\address`, `\phone`, and `\email` separately (the moderncv defaults) stacks the contact block into 3 rows under the name - address, then phone+email, then `\extrainfo`. Fold everything into one `\extrainfo` call instead (address, phone, plain-text email as a `mailto:` link, then the link labels), each separated by `~\textbullet~`, wrapped in `\footnotesize`. Skip `\faMobileAlt`/`\faEnvelope`-style icon commands - they are undefined under this moderncv/fontawesome6 install (silent `! Undefined control sequence` errors under `-interaction=nonstopmode`) and contributed to the line overflowing the page width badly enough to visibly clip the last link (`GitHub` render as `Git`). At default font size the combined line also overflows; `\footnotesize` is what gets it back inside the margins - confirmed by compiling and checking the log for `Overfull \hbox` on the `\extrainfo` line specifically (not just the pre-existing cosmetic overfull warnings elsewhere in the document).
 
 ### Spacing inside itemize lists (important)
 
@@ -136,12 +139,11 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Go (Golang) Backend Developer roles:**
+> Go (Golang) backend developer with 5+ years of experience designing and shipping scalable microservices, RESTful APIs, and gRPC services in production. Deep hands-on work across PostgreSQL, CockroachDB, and AWS, spanning the full lifecycle from data modeling to secure, production-ready deployment. Currently leading backend architecture for an AI-driven talent intelligence platform, including its CV vectorization and semantic-search pipeline. Comfortable mentoring other developers and driving microservices adoption across teams.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Platform Engineer / SRE roles:**
+> Backend engineer with 5+ years building and operating distributed Go systems, with working knowledge of observability (Grafana, Jaeger), containerized deployment (Docker, Kubernetes), and AWS infrastructure (Lambda, CloudFormation, S3). Track record of resolving production reliability issues and driving adoption of microservices architecture to improve system modularity and scalability.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
@@ -202,6 +204,13 @@ If there is a gap in your employment history:
 - Describe how professional development continued during the gap
 - Frame as deliberate skill-building and career repositioning
 
+### Projects (always include)
+Every CV must have a `\section{Projects}`, sourced from `01-candidate-profile.md`. Pull from:
+- **Independent Projects** - personal/open-source work, list freely with `\href` links where verified
+- **Employer Platform Components** - work built as an employee at a *previous or current* role. Only include if it adds signal beyond what's already in the matching Professional Experience bullet, and only in generic terms: strip employer name, domain names, internal infra/deployment specifics (k8s manifests, CI variable names, internal product field names). Never present employer work as an independent/personal project - describe it neutrally (tech stack + what it does), with no ownership claim either way.
+
+Pick 2-4 entries most relevant to the target role; cut per the relevance-weighted rules below if the CV runs long. See `03-writing-style.md` for the no-internal-repo-names-as-products and no-LOC-count rules - both bite hardest right here.
+
 ### Publications
 - Include Google Scholar link if applicable
 - Select 3-4 most relevant publications (not always all of them)
@@ -238,6 +247,26 @@ Two failure modes deserve special care:
 - **`&` fails loudly** inside `\cventry` (alignment-tab errors, `Missing } inserted`). The compile loop catches it, but escape employer names up front rather than debugging the compile.
 
 Related trap: a bullet whose text begins with a literal `[` must be braced - `\item {[text]}` - or LaTeX parses the bracketed text as `\item`'s optional label and renders it clipped off the left page edge with a clean compile. The example CV's placeholder bullets are braced for exactly this reason.
+
+## Bullet Character Budget (narrows what to check, doesn't replace compiling)
+
+Before the first compile, run every new/edited bullet through `helpers/char_count.py` to catch obvious overflows early:
+
+```bash
+python3 .claude/skills/job-application-assistant/helpers/char_count.py -f cv/main_<company>_<role>.tex
+```
+
+Thresholds (empirically calibrated against `cv/main_example.tex` compiled with lualatex on the stock moderncv banking template, 11pt - **not derived from font metrics**, so treat the middle zone as genuinely unverified rather than a soft guess):
+
+| Rendered chars | Meaning |
+|---|---|
+| <= 110 | Safe single line |
+| 111-140 | Unverified - the script flags it, you still compile and read the PDF |
+| >= 141 | Confirmed wraps to 2+ lines |
+
+**Orphan rule for any bullet that wraps:** the last rendered line must fill roughly 70%+ of the line width. A short trailing line (e.g. "and Simli (real-time avatar)" on its own line) reads as a bad wrap even though it's not a `\cventry`-level orphan. Fix by shortening the bullet to fit one line, or rebalancing the wording so the break point lands closer to the margin - don't just leave it. This bit the master CV itself: two bullets originally wrapped to short orphaned second lines and needed shortening before they read cleanly.
+
+This script only approximates plain-text length (see its docstring for what it strips) - it exists to flag likely problem bullets before a compile cycle, not to certify a bullet is safe. The compile-and-inspect loop below is still mandatory regardless of what this script says.
 
 ## Compile-and-Inspect Loop (MANDATORY)
 
@@ -314,6 +343,20 @@ Two independent causes, both easy to avoid:
 
 **Cause 1 is mechanical in step 5d**: `python3 tools/verify_pdf.py cv/main_<company>_<role>.pdf --ascii-dates` scans the raw text layer for a year joined to a Unicode dash and exits 1 naming each hit with its code point (`U+2013 in 'Role Title 2016–2024'`). It deliberately reads the raw layer: the fold that lets `--contains "2016-2024"` match what the template renders maps that same en-dash back to `-`, so `--contains` can never see this. A year on either side of the dash is enough, so `Mar 2016 – Jul 2016` and `2016 – Present` are caught too; a numeric range with no year (`EUR 600k–1M`) is left alone. **Cause 2 stays a read-through check**: after extracting the text layer, confirm every experience entry shows a start *and* an end. Because both failures are silent and invisible in the PDF, the candidate otherwise discovers them only while filling in the application form.
 
+## Pre-Send Reader Check (recommended before presenting the final CV)
+
+The mechanical checks above (compile, ATS text layer) catch formatting and parseability problems. They don't catch "would a human actually forward this." Before presenting the finished CV, read it once as each of these five readers, in order, using the company/JD research already done in Step 1 of the workflow (`04-job-evaluation.md`) - don't re-research from scratch:
+
+| Reader | Time budget | What they see | Verdict to give |
+|---|---|---|---|
+| ATS keyword scan | 0 sec | Posting's top ~15-20 keywords vs. CV text, literal match only | Match rate; name the highest-priority missing keyword that could be added truthfully |
+| Recruiter glance | 10 sec | Name, current title/employer, profile statement's first line | Forward / Maybe / Reject + one-sentence reason |
+| HR screen | 30 sec | Profile statement, skills section headers, first bullet of most recent role | Phone screen / Borderline / Pass + one-sentence reason |
+| Hiring manager | 2 min | The whole CV, as a domain expert | Interview / Maybe / No + what they'd ask about first |
+| Careful technical read | a few min | Every bullet, checking consistency and plausibility | Any claim that reads as inflated or inconsistent with another bullet |
+
+Report the five verdicts to the user in this compact form rather than a full scored rubric - the goal is catching a bad first impression before it ships, not producing a scoring document. If 3+ readers land on a negative verdict, that's a signal to revise before presenting, not just a note.
+
 ## Page Budget - Hard 2-Page Limit
 
 The CV **must** fit on exactly 2 pages when compiled. Use these content limits as a guide:
@@ -326,6 +369,7 @@ The CV **must** fit on exactly 2 pages when compiled. Use these content limits a
 | Previous role | 2-3 bullets |
 | Older roles | 2 bullets (1 line each) |
 | Education | 2-3 entries |
+| Projects | 2-4 entries, 1-2 lines each |
 | Publications | 2-3 entries |
 | Awards | 3 entries, single line each |
 | References | "Available upon request." (single line) |

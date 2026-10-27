@@ -39,6 +39,58 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+
+### CV vectorization pipeline for AI-powered candidate matching
+**Source:** LinkedIn - Back End Developer, DC Forte India Private Limited
+**What happened:** Led design of a pipeline that vectorizes CVs to enable AI-powered semantic search and candidate matching.
+**Why it matters:** Answers questions about technical leadership, AI/ML system design, greenfield architecture.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Skill-Matcher: AI-powered skill extraction tool
+**Source:** CV/Resume - Independent project
+**What happened:** Built a Go application scanning Excel datasets for skill extraction/matching via semantic search, with a TUI offering exact/semantic/hybrid match modes.
+**Why it matters:** Answers questions about independent initiative, concurrent programming, product-thinking outside of assigned work.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Candidate Semantic Matcher: Weaviate/Ollama search service
+**Source:** CV/Resume - Independent project
+**What happened:** Built a gRPC+HTTP service integrating a local Weaviate Vector DB with Ollama embeddings for real-time semantic CV-to-job matching.
+**Why it matters:** Answers questions about vector databases, service architecture, self-directed learning of new tech.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Mentoring junior backend developers
+**Source:** LinkedIn - Backend Developer, GrowThrive Private Limited
+**What happened:** Mentored and guided junior developers on coding, design, and system architecture practices.
+**Why it matters:** Answers questions about leadership, mentoring, team growth without formal management title.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Leading a project from scratch
+**Source:** LinkedIn - Software Engineer, Think Future Technologies
+**What happened:** Led development of a project from scratch (Golang, PostgreSQL, MySQL, gRPC, RPC), owning architecture through delivery.
+**Why it matters:** Answers questions about ownership, greenfield delivery, working under business deadlines.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"
