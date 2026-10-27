@@ -60,7 +60,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- Projects outside employment: personal, open source. See 01-candidate-profile.md for full detail incl. verified links. -->
 - **Skill-Matcher**: Terminal tool (Go, Bubble Tea TUI) for exact/semantic skill matching over Excel datasets using FastText embeddings; concurrent file processing, 300+ built-in skill aliases.
 - **DSA Meets Design** (open source contribution): Merged PR adding full Go language support across 20 machine-coding/LLD interview problems (+22,007/-161 lines) to a community interview-prep repo.
-- **CalcDock: Calculators & Tools**: Flutter mobile calculator app (iOS/Android), built and managed solo using AI coding agents (Claude Code). Currently in closed testing.
+- **CalcDock: Calculators & Tools**: Flutter mobile calculator app (iOS/Android), built and managed solo using AI coding agents (Claude Code). Live on Google Play (confirmed 2026-10-27).
 - **realonlinecalculator.com**: Web-based calculator site built with Astro, deployed on Cloudflare, built and managed solo using AI coding agents (Claude Code). Live/deployed.
 
 <!-- Candidate Semantic Match Service and CV Generator Service are DC Forte/Kalido employer platform components (same work as the CV vectorization/semantic-search bullet above under DC Forte), not independent projects. See "Employer Platform Components" in 01-candidate-profile.md - do not list as personal projects on a CV, and never include employer name/domain/infra specifics if referenced. -->

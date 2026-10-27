@@ -49,6 +49,7 @@ Gurugram - Remote
 - Built a multi-agent content-generation pipeline orchestrated via the Anthropic Claude API (brief synthesis, budget modeling, content-generation agents), packaged as a cross-platform Electron desktop app with a local Express server and SQLite storage
 - Extended platform backend services in Django REST Framework (Python) and PHP/Laravel alongside Go and Node.js, integrating WhatsApp Business API and third-party content/distribution APIs (Bit.ly, Google Drive, image/video generation services)
 - Coach and mentor backend developers via code reviews and best-practice sharing
+- Main point of contact for backend at DC Forte (candidate-stated 2026-10-27 as "the main person to contact"; exact scope, on-call vs general escalation, not confirmed - do not put on a CV until clarified)
 - Ported the platform's core API backend from Node.js/Express to Go (candidate-confirmed 2026-10-21; source: project memory of the migration). Worked in phases (auth, core routes, data layer with sqlc, storage, workers), matched Node's AES-256-CBC PII encryption exactly, and ran handler-by-handler parity audits against the Node code using Claude Code. Parity fixes found by the audits included a Go default of isActive=false where Node defaults true, and a missing organisation-scope check on job delete. Do not name the internal product on CVs.
 - Go services authenticate with JWT; third-party integrations use OAuth; monitoring uses OpenTelemetry and Prometheus (candidate-confirmed 2026-10-21, applies to both DC Forte and GrowThrive)
 - Work within a multinational engineering team (candidate-confirmed)
@@ -67,6 +68,7 @@ Gurugram - Remote
 - Collaborate with designers, frontend, DevOps, and QA to deliver seamless end-to-end solutions
 - Designed and implemented database schemas and queries optimizing performance and scalability for complex systems
 - Ensured system reliability via monitoring tools (Grafana, Jaeger, OpenTelemetry, Prometheus), actively resolving production issues
+- Participated in an on-call rotation (candidate-confirmed 2026-10-27)
 - Go services authenticated with JWT; third-party integrations used OAuth (candidate-confirmed 2026-10-21)
 - Scale/impact metrics (candidate-confirmed 2026-10-21, approximate figures): 20-25 Go microservices processing millions of matches; 99.9% uptime; average API latency under 200 ms (exceptions: long file fetch/export operations); most production issues resolved in under an hour
 - Used GitHub Copilot for AI-assisted development (candidate-confirmed 2026-10-21)
@@ -108,7 +110,7 @@ Gurugram - Remote
 - **Skill-Matcher**: Terminal tool (Go, Bubble Tea TUI) that scans Excel datasets for skill matches - exact text matching or exact + semantic fallback using FastText word embeddings. Concurrent processing of every file in a folder; over 300 built-in skill aliases for normalization (e.g. "js" to "javascript"). [GitHub](https://github.com/Himanshujk/skill-matcher)
 - **DSA Meets Design** (open source contribution): Merged pull request adding full Go language support across all 20 machine-coding/LLD interview problems (+22,007/-161 lines, 218 files) to a community machine-coding interview-prep repo. [PR #2](https://github.com/jkaus324/machine-coding-interview-questions/pull/2)
 - **Go performance writing (LinkedIn)**: published Go technical posts and carousels, e.g. GOMEMLIMIT vs GOGC benchmark runs, sync.Pool GC-pause fix, Go error-handling guidance (seen on the public LinkedIn profile 2026-10-21; claims in the posts such as the 340 ms p99 story are the candidate's own and not confirmed for CV use).
-- **CalcDock: Calculators & Tools**: Flutter mobile calculator app (iOS/Android), built and managed solo using AI coding agents (Claude Code). Currently in closed testing.
+- **CalcDock: Calculators & Tools**: Flutter mobile calculator app (iOS/Android), built and managed solo using AI coding agents (Claude Code). Live on Google Play (candidate-confirmed 2026-10-27; previously in closed testing; iOS App Store status not stated). [Google Play](https://play.google.com/store/apps/details?id=com.realonlinecalculator.calcdock) (link supplied by the candidate; my fetch of the page was inconclusive).
 - **realonlinecalculator.com**: Web-based calculator site built with Astro, deployed on Cloudflare, built and managed solo using AI coding agents (Claude Code). Live/deployed.
 - **Elemental Merge**: Flutter mobile physics-merge game using the Flame game engine and Flame Forge2D physics engine. Built solo using AI coding agents (Claude Code). Early/in-development, not yet released.
 
