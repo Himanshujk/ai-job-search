@@ -2,7 +2,7 @@
 
 ## Installed portal CLIs (primary for `/scrape`)
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
+`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. None ship with AI Job Search: copy the ones for your market from [community-portals](https://github.com/ai-job-search-dev/community-portals) (e.g. `linkedin-search`, `freehire-search` under `portals/global/`), or build one with `/add-portal`. You do **not** need a matching `site:` line below for those CLIs to run.
 
 The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
 
@@ -44,6 +44,8 @@ For indeed.com, use the built-in `Indeed` MCP connector (`search_jobs` / `get_jo
 
 Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
 
+Each priority has two kinds of block. **Plain terms** blocks are what the portal CLIs consume: one term per line, one CLI call per term, no `OR`, no `site:` prefix, and no location (the CLI's location flag, or the city in `--query` where that portal's SKILL.md says so, carries it). Quote a multi-word phrase only if the portal's `Query syntax:` line says quoting is honoured. **WebSearch-only** blocks are Google syntax (`site:`, quotes, `OR`) for the fallback path and are never passed to a CLI.
+
 **Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
 
 For this candidate, most queries pair role and skill terms with "remote" rather than a fixed city, since the primary preference is remote work with openness to relocation only if visa and relocation are sponsored.
@@ -55,6 +57,16 @@ Core, most desired career direction. Role-title variants to search (each paired 
 non-Go roles): **Golang Developer, Go Backend Developer, Backend Developer, Software
 Developer, Software Engineer** — each also searched with **Senior** and **Lead**
 prefixes.
+
+#### Plain terms (portal CLIs)
+
+```
+[YOUR_PRIMARY_JOB_TITLE_1]
+[YOUR_PRIMARY_JOB_TITLE_2]
+[YOUR_KEY_SKILL]
+```
+
+#### WebSearch-only (`site:` fallback)
 
 ```
 site:linkedin.com/jobs "Golang Developer" remote
@@ -94,6 +106,15 @@ indeed MCP connector: search_jobs("Senior Backend Developer Golang", "remote", "
 
 Match domain expertise (gRPC, microservices, distributed backend systems).
 
+#### Plain terms (portal CLIs)
+
+```
+[YOUR_DOMAIN_KEYWORD_1]
+[YOUR_DOMAIN_KEYWORD_2]
+```
+
+#### WebSearch-only (`site:` fallback)
+
 ```
 site:linkedin.com/jobs "microservices" "Golang" remote
 site:linkedin.com/jobs "distributed systems" "Go" remote
@@ -105,6 +126,15 @@ site:wellfound.com Golang backend
 
 Adjacent roles the candidate could pivot into, given AWS/Docker/Kubernetes/observability experience.
 
+#### Plain terms (portal CLIs)
+
+```
+[YOUR_ADJACENT_TITLE_1]
+[YOUR_ADJACENT_TITLE_2]
+```
+
+#### WebSearch-only (`site:` fallback)
+
 ```
 site:linkedin.com/jobs "Platform Engineer" "Go" remote
 site:linkedin.com/jobs "Site Reliability Engineer" Golang remote
@@ -114,6 +144,15 @@ site:linkedin.com/jobs "Site Reliability Engineer" Golang remote
 ### Priority 4: Broader Backend / Consulting
 
 Wider net for general backend roles.
+
+#### Plain terms (portal CLIs)
+
+```
+[YOUR_KEY_SKILL] developer
+technical consultant
+```
+
+#### WebSearch-only (`site:` fallback)
 
 ```
 site:linkedin.com/jobs "Backend Developer" remote
@@ -148,7 +187,7 @@ Your working languages and levels are in CLAUDE.md's Languages table. When filte
 
 ## Date Filter
 
-Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
+Only include jobs posted within the last 14 days, matching `/scrape` Step 1b.3: use a supported recency filter or filter the returned publication dates client-side. A future application deadline does not bypass this discovery window; `/rank` handles deadline expiry and urgency separately after discovery. If a posting date cannot be determined, include it but flag as "date unknown".
 
 ## Adapting Queries
 
