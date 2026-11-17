@@ -123,4 +123,4 @@ company_research/*.json
 .superpowers/
 
 .claude-flow
-*.db
+*.db*
