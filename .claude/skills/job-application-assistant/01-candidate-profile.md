@@ -15,7 +15,7 @@ framework_version: 1.1.1
 - **LinkedIn:** linkedin.com/in/himanshu-j-719b33b4
 - **GitHub:** https://github.com/Himanshujk
 - **Status:** Currently employed - Back End Developer at DC Forte India Private Limited
-- **Constraints:** Remote preferred; open to relocation to any location if the employer covers relocation and visa costs
+- **Constraints:** Remote preferred; open to relocation to any location if the employer covers relocation and visa costs (candidate approved "open to relocation" in the CV header for on-site roles, 2026-10-31). Candidate confirmed 2026-11-11 willing to work fully on-site with fixed office hours (asked for a Tokyo on-site role, 8:45-17:45) given relocation and visa support.
 
 ### Languages
 <!-- Every language you can work in professionally, with your honest level. Used by the
@@ -53,6 +53,9 @@ Gurugram - Remote
 - Ported the platform's core API backend from Node.js/Express to Go (candidate-confirmed 2026-10-21; source: project memory of the migration). Worked in phases (auth, core routes, data layer with sqlc, storage, workers), matched Node's AES-256-CBC PII encryption exactly, and ran handler-by-handler parity audits against the Node code using Claude Code. Parity fixes found by the audits included a Go default of isActive=false where Node defaults true, and a missing organisation-scope check on job delete. Do not name the internal product on CVs.
 - Go services authenticate with JWT; third-party integrations use OAuth; monitoring uses OpenTelemetry and Prometheus (candidate-confirmed 2026-10-21, applies to both DC Forte and GrowThrive)
 - Work within a multinational engineering team (candidate-confirmed)
+- Regularly instrument Go services with OpenTelemetry spans and metrics (candidate-confirmed 2026-10-31, applies to both DC Forte and GrowThrive)
+- Always write tests for each independently testable unit of code (candidate-confirmed 2026-10-31, applies to both DC Forte and GrowThrive; test framework per employer not specified)
+- Regularly talk with the CEO, product managers, and designers, mostly non-technical, and explain incidents to them whenever they happen (candidate-confirmed 2026-10-31 for both DC Forte and GrowThrive)
 - Work in Agile/Scrum-style delivery, with sprint/task tracking in monday.com (candidate-confirmed; ceremony-level detail such as sprint planning/estimation/retros not individually confirmed)
 - Collaborate with AI, Product, Frontend, and DevOps teams to ship production-grade products under tight deadlines
 - Manage and maintain the platform's codebases across multiple languages (Go, Python, PHP, Node.js backend, TypeScript/React frontend) using AI coding agents (Claude Code, used daily)
@@ -64,11 +67,13 @@ Gurugram - Remote
 - Designed and built a multi-tenant permissions system (RBAC + attribute-based rules) with JWT-based claims and DB-backed roles/permissions tables (PostgreSQL/CockroachDB), enforced via middleware across API endpoints
 - Mentor and guide junior developers on coding, design, and system architecture practices
 - Worked within multinational engineering teams (candidate-confirmed)
-- Worked in Agile/Scrum-style delivery with Jira for tracking (candidate-confirmed; Jira confirmed for the earlier roles, exact employer split not specified)
+- Worked in Agile/Scrum-style delivery (candidate-confirmed). Jira: the candidate named Think Future as where Jira was used (2026-10-31), so do not cite Jira for GrowThrive.
 - Collaborate with designers, frontend, DevOps, and QA to deliver seamless end-to-end solutions
 - Designed and implemented database schemas and queries optimizing performance and scalability for complex systems
 - Ensured system reliability via monitoring tools (Grafana, Jaeger, OpenTelemetry, Prometheus), actively resolving production issues
 - Participated in an on-call rotation (candidate-confirmed 2026-10-27)
+- Regularly instrumented Go services with OpenTelemetry spans and metrics, and always wrote tests for each independently testable unit of code (candidate-confirmed 2026-10-31)
+- Regularly talked with the CEO, product managers, and designers, mostly non-technical, and explained incidents to them whenever they happened (candidate-confirmed 2026-10-31)
 - Go services authenticated with JWT; third-party integrations used OAuth (candidate-confirmed 2026-10-21)
 - Scale/impact metrics (candidate-confirmed 2026-10-21, approximate figures): 20-25 Go microservices processing millions of matches; 99.9% uptime; average API latency under 200 ms (exceptions: long file fetch/export operations); most production issues resolved in under an hour
 - Used GitHub Copilot for AI-assisted development (candidate-confirmed 2026-10-21)
@@ -127,12 +132,15 @@ Gurugram - Remote
 - **Go (Golang)** (5+ years, professional): gRPC, RPC, Protocol Buffers, GoMock, pprof, Ginkgo, Gin, Cobra
 - **C++, C**
 - Semantic search / vector search integration (Weaviate, Ollama embeddings, VectorDB)
+  <!-- GraphQL (candidate-confirmed 2026-11-11): queried Weaviate through its Go client's GraphQL query interface while building vector search. Consumer-side querying only - has NOT designed, built or served a GraphQL API/schema/resolvers. Employer not specified (Weaviate appears under DC Forte components below). Cite as "GraphQL (Weaviate query interface)", never as GraphQL API development. -->
+- **GraphQL** (consumer-side): used Weaviate's GraphQL query interface via its Go client for vector search queries (candidate-confirmed 2026-11-11); no GraphQL API/schema design experience
 - AI/LLM integration: OpenAI API, Anthropic Claude API (multi-agent orchestration), LiveKit (real-time audio/video/agents), Deepgram (STT), Cartesia (TTS), Simli (real-time avatar)
 - **Secondary stacks - AI-assisted exposure only (via Claude Code)**: Python (Django, Django REST Framework, Celery), PHP (Laravel), Node.js/TypeScript/React, Electron. Directed and reviewed through Claude Code on DC Forte's polyglot platform; can describe what these services do and why, but not independently fluent - would not be able to debug/extend them unaided in an interview or pairing session. Do not list these as standalone "skills" on a CV; only cite them as AI-assisted platform exposure, never implying independent hands-on depth. Primary hands-on depth is Go.
 
 ### Domain Expertise
 - Backend microservices architecture & distributed systems
 - Identity & access management: RBAC, attribute-based access control, JWT-based authentication/authorization for Go services, OAuth for third-party integrations, multi-tenant permission scoping
+- Social login: implemented Google sign-in and Apple sign-in (both OpenID Connect-based) (candidate-confirmed 2026-11-11; employer not specified). Candidate described it as "worked with google login, apple login"; has not stated deeper OIDC provider/IdP work (e.g. running an OIDC server, Keycloak/Auth0) - do not claim that.
 - API platforms: RESTful APIs, OAuth2, OpenAPI/Swagger, WebSockets, Kong API gateway
 - Database design: CockroachDB, PostgreSQL, MySQL, Redis, Elasticsearch
 - Cloud & DevOps: Docker, Kubernetes, AWS (Lambda, CloudFormation, S3, Bedrock, IAM), GCP (Cloud Storage, BigQuery), CI/CD, Linux
@@ -142,7 +150,7 @@ Gurugram - Remote
 - Version control: GitHub
 
 ### Software & Tools
-- Project tracking / Agile: Jira (earlier roles), monday.com (current)
+- Project tracking / Agile: Jira (Think Future, candidate-confirmed 2026-10-31), monday.com (current)
 - LaTeX
 - GitHub Copilot (used at GrowThrive, candidate-confirmed 2026-10-21)
 - Claude Code (used daily in real engineering work, candidate-confirmed 2026-10-08), Cursor, Antigravity CLI, MCP (Model Context Protocol) - agentic coding workflows, custom MCP server integrations
